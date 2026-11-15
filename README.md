@@ -1,19 +1,27 @@
 # Are executives letting ChatGPT write for them?
 
-A measurement of whether "AI-style" vocabulary (delve, underscore, pivotal, transformative...) spiked in what
-senior executives say and publish after ChatGPT's release on 30 November 2022.
+I checked 163 million words from the bosses of America's 500 biggest companies to see whether they started
+sounding like ChatGPT after it launched in November 2022.
 
-- **Findings (one page):** [results.md](results.md)
-- **How it was done, and every judgement call:** [methodology.md](methodology.md)
-- **Project site:** https://yousuf6273.github.io/exec-ai-vocab/
+**The answer: maybe a little, but there is no proof.**
 
-**Short answer.** There is no jump at the ChatGPT date. Tell-word use does drift upward in 2024-25 in
-text that is drafted in advance (prepared remarks +10%, executive quotes in press releases +17%) but not
-in live Q&A answers from the same people (-6%) or in press-release narrative (-9%). That is the pattern
-AI-assisted drafting would produce, but the effect is small, is carried by a handful of words
-(transformative, landscape, underscore, harness), and is not statistically separable from ordinary
-vocabulary drift (p = 0.08 against matched control words). "Delve" never appears. The largest vocabulary
-shock in the period is COVID-19 (2020), not ChatGPT.
+- Nothing changed when ChatGPT came out.
+- From 2024, a few "AI-sounding" words (underscore, transformative, harness...) creep up, but only in text
+  written ahead of time: scripted speeches +10%, press-release quotes +17%. When the same executives speak
+  live, nothing changes (−6%). That is a real hint.
+- The change is small and no bigger than normal drift in business language (about 1 random group of
+  ordinary words in 12 moved just as much). A hint, not a smoking gun.
+- The moment executive language really changed was COVID in 2020. And nobody says "delve".
+
+**Read more:** [project site](https://yousuf6273.github.io/exec-ai-vocab/) ·
+[results in one page](results.md) · [full method](methodology.md)
+
+## The idea in three steps
+
+1. ChatGPT overuses certain words. Count 18 of them in executive language, 2017 to 2026.
+2. On an earnings call, executives **read a script** and then **answer questions live**. AI can write the
+   script, not the live answer. Compare the two.
+3. Check the result against random ordinary words, a fake launch date, and every other word in the corpus.
 
 ## Data
 
@@ -70,10 +78,12 @@ address in `SEC_UA` in `src/config.py`.
 The company leaderboard (`charts/company_vocabulary_shift.png`, `results/company_vocabulary_shift.csv`)
 ranks **vocabulary shift only**. A high rank is not evidence that a company used AI.
 
-## Method reference
+## For the technically minded
 
-Kobak, González-Márquez, Horvát, Lause (2024), *Delving into LLM-assisted writing in biomedical publications
-through excess vocabulary*, arXiv:2406.07016.
+Segmented (interrupted time-series) regression with Newey-West errors and a company fixed-effects panel;
+difference-in-differences between scripted and spontaneous speech on the same calls; 1,000 draws of
+frequency-matched control words; a placebo break date; company-cluster bootstrap intervals; and the
+excess-vocabulary method of Kobak, González-Márquez, Horvát and Lause (2024, arXiv:2406.07016).
+Details and every judgement call are in [methodology.md](methodology.md).
 
-Built autonomously by an AI coding agent (Claude); see `methodology.md` for what that means for how to
-read the results.
+Built end to end by an AI coding agent (Claude).

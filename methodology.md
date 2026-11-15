@@ -1,12 +1,28 @@
 # Methodology
 
-Question: did "AI-style" vocabulary rise in what senior executives say and publish after ChatGPT
-was released on 30 November 2022, and where did it rise most?
+## In plain words
 
-Everything below was decided by the analyst (an AI coding agent working autonomously) and is
-recorded so that each judgement call can be challenged. Word lists, windows, break dates and control
-rules were written into `src/config.py` and `src/analyse.py` **before** results were inspected. Where a
-choice was made after seeing data, it is flagged with **[post-hoc]**.
+**The question.** Did company bosses start sounding like ChatGPT after it launched on 30 November 2022?
+
+**What I measured.** How often 18 "AI-sounding" words (delve, underscore, pivotal, transformative...) appear
+in what S&P 500 executives say and publish, from 2017 to 2026.
+
+**The trick that makes it fair.** On an earnings call the same people read a script and then answer
+questions live. AI can write a script but not a live answer, so live speech is the comparison group.
+
+**The safety checks.**
+1. *Random words:* do the AI words move more than 1,000 random groups of equally common words?
+2. *Fake date:* does the same test "find" an effect at a date when nothing happened (November 2020)? It should not.
+3. *All words:* instead of trusting my list, which words in the whole corpus grew faster than expected?
+4. *Honesty rule:* word lists, dates and tests were fixed before looking at results. Anything decided
+   afterwards is marked **[post-hoc]**.
+
+**What this cannot do.** It cannot tell whether any single speech or company used AI. It only measures
+whether wording shifted.
+
+The rest of this document is the detailed record: where the data came from, how it was cleaned, and every
+judgement call, so that each one can be challenged. It was written by the analyst, an AI coding agent
+working autonomously.
 
 ## 1. Sources considered
 
