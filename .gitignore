@@ -1,0 +1,7 @@
+.venv/
+cache/
+__pycache__/
+*.pyc
+.DS_Store
+# cleaned text is rebuilt locally by the pipeline; transcripts are third-party copyrighted text and are not redistributed
+data/corpus_text.csv.gz

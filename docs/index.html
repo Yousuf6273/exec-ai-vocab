@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Are executives letting ChatGPT write for them?</title>
+<meta name="description" content="Tell-word and excess-vocabulary analysis of 163 million words of S&P 500 executive language, 2017-2026.">
+<style>
+:root{--bg:#fcfcfb;--ink:#0b0b0b;--muted:#52514e;--line:#e4e3df;--card:#ffffff;--blue:#2a78d6;--orange:#eb6834;--aqua:#1baf7a}
+@media (prefers-color-scheme:dark){:root{--bg:#121211;--ink:#f2f1ee;--muted:#a9a8a3;--line:#2c2b29;--card:#1a1a19}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif}
+main{max-width:920px;margin:0 auto;padding:48px 16px 80px}
+h1{font-size:clamp(30px,5vw,46px);line-height:1.1;margin:0 0 12px;letter-spacing:-.02em}
+h2{font-size:24px;margin:56px 0 10px;letter-spacing:-.01em}
+p{margin:0 0 14px}
+.lede{font-size:20px;color:var(--muted);margin-bottom:28px}
+.kicker{font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:10px}
+.verdict{border-left:4px solid var(--blue);background:var(--card);padding:18px 20px;border-radius:0 8px 8px 0;margin:24px 0}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;margin:24px 0}
+.tile{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px}
+.tile b{display:block;font-size:30px;line-height:1.1;letter-spacing:-.02em}
+.tile span{font-size:14px;color:var(--muted)}
+figure{margin:20px 0 8px}
+figure img{width:100%;height:auto;border:1px solid var(--line);border-radius:8px;background:#fcfcfb}
+figcaption{font-size:14px;color:var(--muted);margin-top:6px}
+.scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:15px;margin:12px 0}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);white-space:nowrap}
+th{font-size:13px;color:var(--muted);font-weight:600}
+td.n{font-variant-numeric:tabular-nums}
+.up{color:var(--aqua);font-weight:600}
+a{color:var(--blue)}
+ul{padding-left:20px}
+li{margin-bottom:6px}
+footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
+code{font-size:.9em;background:var(--card);border:1px solid var(--line);border-radius:4px;padding:1px 5px}
+</style>
+</head>
+<body>
+<main>
+<div class="kicker">Research project · November 2026</div>
+<h1>Are executives letting ChatGPT write for them?</h1>
+<p class="lede">163 million words spoken and published by S&amp;P 500 executives, 2017 to 2026, searched for the vocabulary that gives AI writing away.</p>
+
+<div class="verdict">
+<p><strong>Short answer: the data cannot show it.</strong> There is no jump when ChatGPT launched. From 2024 there is a modest rise in "AI-style" words, and it shows up only in text that somebody drafts in advance (prepared remarks, quotes in press releases), not in live answers from the same executives. That is what AI-assisted drafting would look like. But the rise is small, comes from a handful of words, and is not statistically distinguishable from ordinary drift in corporate vocabulary.</p>
+<p style="margin:0">The real vocabulary shock of the period was COVID-19, not ChatGPT.</p>
+</div>
+
+<div class="tiles">
+<div class="tile"><b>+10%</b><span>tell-words in prepared remarks, 2021-22 vs 2024-25 (95% interval +4 to +17)</span></div>
+<div class="tile"><b>−6%</b><span>the same executives answering live questions (−14 to +2)</span></div>
+<div class="tile"><b>+17%</b><span>executive quotes in press releases (+6 to +30)</span></div>
+<div class="tile"><b>p = 0.08</b><span>prepared remarks vs 1,000 sets of equally common ordinary words</span></div>
+<div class="tile"><b>2 per million</b><span>how often executives say "delve". It did not move.</span></div>
+</div>
+
+<h2>1. No break at the ChatGPT date</h2>
+<p>The 18 tell-words (delve, underscore, pivotal, showcase, intricate, meticulous, tapestry, realm, testament, seamless, foster, bolster, navigate, landscape, elevate, harness, unwavering, transformative) nearly doubled in prepared remarks in 2020, when every company was "navigating" "elevated" uncertainty with "unwavering" commitment. After November 2022 the line is flat for two years. A segmented regression with a break at Q4 2022 finds the post-ChatGPT period slightly <em>below</em> trend, and nothing once the COVID step is allowed for (−0.3 per 10,000 words, interval −0.9 to +0.3).</p>
+<figure><img src="charts/tell_word_trend.png" alt="Tell-word rate per 10,000 words and share of passages containing a tell-word, by quarter, for four text types, with the ChatGPT launch marked">
+<figcaption>The 2025 spike is "navigate" again, this time for tariffs.</figcaption></figure>
+
+<h2>2. The built-in control: scripted vs spontaneous</h2>
+<p>On an earnings call, executives read a script and then answer analysts unscripted. Removing five word families with obvious business meanings (navigate, elevate, unwavering, pivotal, landscape), prepared remarks rise 29% (+18 to +41) while live answers do not move (+4%, −10 to +20). The gap between the two widens faster after 2023 (slope change +0.10 per 10,000 words per quarter, p&lt;0.001), with no sudden jump.</p>
+<figure><img src="charts/scripted_vs_spontaneous.png" alt="Core tell-words indexed for scripted and spontaneous speech, and the gap between them against its pre-2023 trend"></figure>
+
+<div class="scroll"><table>
+<tr><th>Channel</th><th>All 18 words</th><th>Core 13</th></tr>
+<tr><td>Scripted: prepared remarks</td><td class="n up">+10% (+4 to +17)</td><td class="n up">+29% (+18 to +41)</td></tr>
+<tr><td>Spontaneous: live Q&amp;A</td><td class="n">−6% (−14 to +2)</td><td class="n">+4% (−10 to +20)</td></tr>
+<tr><td>Written: executive quotes in press releases</td><td class="n up">+17% (+6 to +30)</td><td class="n up">+41% (+22 to +66)</td></tr>
+<tr><td>Written: press-release narrative</td><td class="n">−9% (−20 to +5)</td><td class="n">+19% (−2 to +47)</td></tr>
+</table></div>
+<p style="font-size:14px;color:var(--muted)">Change in rate per 10,000 words, 2021Q1-2022Q4 vs 2024Q1 onward, with 95% company-cluster bootstrap intervals.</p>
+
+<h2>3. Controls and placebo</h2>
+<p>How much does a random set of equally common words move over the same period? Quite a lot. The tell-words sit toward the top of that distribution in prepared remarks and press-release quotes but inside it (p = 0.08 and 0.11). Only <em>transformative</em> and <em>landscape</em> individually beat their matched controls. A fake break date in November 2020 produces no effect, as it should.</p>
+<figure><img src="charts/controls_placebo.png" alt="Tell-word index against matched control word sets, regression effects for real and placebo break dates, and each word family against its frequency-matched controls"></figure>
+
+<h2>4. Excess vocabulary</h2>
+<p>Following Kobak et al. (2024), every word's 2024 frequency is compared with a projection from 2021-22. In biomedical abstracts that method surfaces hundreds of style words. Here the words that exploded are topics: <em>genai</em>, <em>copilot</em>, <em>generative</em>, hurricane <em>Milton</em>, the <em>peso</em>. Ten style words do pass the test in prepared remarks (advancements, crucial, empowers, enhance, enhancing, insights, landscape, transformative, underscoring, unlocking) against four in live answers. The paper's lower-bound estimate of AI-affected text comes out at about 2 percentage points for 2024 prepared remarks (−0.9 to +3.9), against roughly 13% for the abstracts in the original study.</p>
+<figure><img src="charts/top_excess_words.png" alt="Top excess words in 2024 scripted remarks and excess ratios of LLM style-marker words in scripted versus spontaneous speech"></figure>
+
+<h2>5. Where it moved</h2>
+<p>CEOs, not CFOs: +19% (+11 to +28) against −4% (−14 to +7) in prepared remarks. Healthcare (+38%) and Utilities (+42%) are the only sectors clearly above zero. Company size makes no difference. Individual word families show how uneven the picture is.</p>
+<figure><img src="charts/sector_heatmap.png" alt="Heatmap of tell-word rate by sector and year relative to 2021-22"></figure>
+<figure><img src="charts/tell_word_families.png" alt="Small multiples: yearly rate of each of the 18 tell-word families in scripted and spontaneous speech"></figure>
+
+<h2>6. Company vocabulary shift</h2>
+<p>This ranks how much each company's prepared remarks changed. <strong>It is a vocabulary-shift ranking, not evidence that any company uses AI to write.</strong> Many of the largest movers are driven by words with plain business meanings, a new speech-writer, or a new CEO.</p>
+<figure><img src="charts/company_vocabulary_shift.png" alt="Bar chart of the twenty companies with the largest increase in tell-word rate"></figure>
+
+<h2>Limitations</h2>
+<ul>
+<li>Tell-words are not AI detectors. Most were already rising in corporate language before 2022.</li>
+<li>COVID makes any projected pre-trend fragile; the conclusions lean on the scripted-vs-spontaneous and control-word comparisons instead.</li>
+<li>The effect is small in absolute terms: about one extra tell-word in every four calls.</li>
+<li>Large US-listed companies only. The main transcript series ends in May 2025; press releases run to November 2026.</li>
+<li>Alternative explanations are not ruled out: fashion in corporate language, and AI as a <em>topic</em> pulling in words like "transformative" and "harness".</li>
+</ul>
+
+<h2>Data and method</h2>
+<p>Earnings-call transcripts for S&amp;P 500 companies (Hugging Face, 17,000 calls since 2017) split into prepared remarks and live Q&amp;A, plus 23,500 earnings press releases from SEC EDGAR. All sources are free and need no account. Boilerplate (safe-harbor statements, tables, contacts) is stripped; every document carries company, sector, size, date, speaker role and text type.</p>
+<p><a href="https://github.com/Yousuf6273/exec-ai-vocab">Code and data on GitHub</a> · <a href="https://github.com/Yousuf6273/exec-ai-vocab/blob/main/results.md">One-page results</a> · <a href="https://github.com/Yousuf6273/exec-ai-vocab/blob/main/methodology.md">Methodology and every judgement call</a></p>
+
+<footer>Analysis designed and run autonomously by an AI coding agent (Claude); all decisions are documented in the methodology. Reference: Kobak, González-Márquez, Horvát, Lause (2024), arXiv:2406.07016.</footer>
+</main>
+</body>
+</html>
